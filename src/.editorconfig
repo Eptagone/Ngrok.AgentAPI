@@ -1,0 +1,25 @@
+﻿[*.cs]
+
+# IDE0070: Use 'System.HashCode'
+dotnet_diagnostic.IDE0070.severity = suggestion
+
+# IDE0034: Simplify 'default' expression
+dotnet_diagnostic.IDE0034.severity = suggestion
+
+# IDE0041: Use 'is null' check
+dotnet_diagnostic.IDE0041.severity = suggestion
+
+# IDE0060: Remove unused parameter
+dotnet_diagnostic.IDE0060.severity = suggestion
+
+# IDE0063: Use simple 'using' statement
+dotnet_diagnostic.IDE0063.severity = suggestion
+
+# IDE0090: Use 'new(...)'
+dotnet_diagnostic.IDE0090.severity = suggestion
+
+# IDE0100: Remove redundant equality
+dotnet_diagnostic.IDE0100.severity = suggestion
+
+# IDE0120: Simplify LINQ expression
+dotnet_diagnostic.IDE0120.severity = suggestion

@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<Version>0.1.0</Version>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<AnalysisLevel>latest</AnalysisLevel>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Authors>Quetzal Rivera</Authors>
+		<Description>Simple library to use the ngrok Agent API. Start and stop tunnels programmatically.</Description>
+		<Copyright>Quetzal Rivera 2021 ©</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageTags>ngrok;agent;api</PackageTags>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<RepositoryUrl>https://github.com/Eptagone/Ngrok.AgentAPI</RepositoryUrl>
+		<PackageIcon>packicon.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\.editorconfig" Link=".editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.Text.Json" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="packicon.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>

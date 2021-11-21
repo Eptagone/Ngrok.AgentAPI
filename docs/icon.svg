@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="C:\Users\Quetz\OneDrive\Documentos\GitHub\Ngrok.AgentAPI\docs\icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title25307">Ngrok Agent API Icon</title>
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.95507812"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     scale-x="0.25" />
+  <defs
+     id="defs2">
+    <rect
+       x="136"
+       y="304"
+       width="324.77979"
+       height="72.969795"
+       id="rect9042" />
+    <rect
+       x="34"
+       y="140"
+       width="446"
+       height="258"
+       id="rect3801" />
+    <rect
+       x="103"
+       y="223"
+       width="344.5455"
+       height="133.64062"
+       id="rect693" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#008000;fill-opacity:1;stroke-width:0.264583"
+       id="path20234"
+       cx="64"
+       cy="64"
+       r="64" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.29394879,0,0,0.34243344,-14.410064,-42.638146)"
+       id="text691"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:96px;line-height:1.25;font-family:'Cascadia Code';-inkscape-font-specification:'Cascadia Code Bold';white-space:pre;shape-inside:url(#rect693);fill:#f9f9f9;fill-opacity:1;stroke:none"
+       x="56.367188"
+       y="0"><tspan
+         x="134.64746"
+         y="311.63866"
+         id="tspan870"><tspan
+           style="text-align:center;text-anchor:middle"
+           id="tspan868">ngrok</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26408908,0,0,0.34482318,-11.867168,-36.668589)"
+       id="text9040"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:54.7615px;line-height:1.25;font-family:'Cascadia Code';-inkscape-font-specification:'Cascadia Code Bold';text-align:center;white-space:pre;shape-inside:url(#rect9042);fill:#f9f9f9;fill-opacity:1;stroke:none"
+       x="136.52344"
+       y="0"><tspan
+         x="153.99897"
+         y="354.56235"
+         id="tspan872">Agent API</tspan></text>
+  </g>
+  <metadata
+     id="metadata25305">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Ngrok Agent API Icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
