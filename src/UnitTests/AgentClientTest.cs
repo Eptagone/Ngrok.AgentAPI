@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Quetzal Rivera.
+// Copyright (c) 2022 Quetzal Rivera.
 // Licensed under the MIT License, See LICENCE in the project root for license information.
 
 using Ngrok.AgentAPI;
@@ -7,6 +7,7 @@ using Xunit;
 using System;
 using System.Linq;
 using System.Net.Http;
+using Xunit.Abstractions;
 
 namespace UnitTests
 {
@@ -19,9 +20,12 @@ namespace UnitTests
         private const string sampleTunnelUrl2 = "https://localhost:4040";
         private const string sampleHeader2 = "localhost:80";
 
+        private readonly ITestOutputHelper _outputHelper;
         private readonly NgrokAgentClient api;
-        public AgentClientTest()
+
+        public AgentClientTest(ITestOutputHelper outputHelper)
         {
+            _outputHelper = outputHelper;
             api = new NgrokAgentClient();
         }
 
@@ -42,6 +46,8 @@ namespace UnitTests
                 Assert.NotNull(tunnel.Config);
                 Assert.NotNull(tunnel.Config?.Addr);
                 Assert.NotNull(tunnel.Config?.Inspect);
+
+                _outputHelper.WriteLine("Tunnel: {0}", tunnel.Name);
             }
         }
 
@@ -62,15 +68,16 @@ namespace UnitTests
                 Assert.NotNull(tunnel.Config);
                 Assert.NotNull(tunnel.Config?.Addr);
                 Assert.NotNull(tunnel.Config?.Inspect);
+
+                _outputHelper.WriteLine("Tunnel: {0}", tunnel.Name);
             }
         }
 
         [Fact]
-        public void StartTunnelWithHttpProto()
+        public void StartHttpTunnel()
         {
-            var configuration = new TunnelConfiguration(sampleTunnelName, "http", sampleTunnelUrl2)
+            var configuration = new HttpTunnelConfiguration(sampleTunnelName, sampleTunnelUrl2)
             {
-                BindTls = "true",
                 HostHeader = sampleHeader2
             };
             try
@@ -86,19 +93,22 @@ namespace UnitTests
                 Assert.NotNull(tunnel.Config);
                 Assert.NotNull(tunnel.Config?.Addr);
                 Assert.NotNull(tunnel.Config?.Inspect);
+
+                _outputHelper.WriteLine("Start Tunnel: {0}", tunnel.Name);
             }
             catch (Exception e)
             {
                 Assert.IsType<HttpRequestException>(e);
+                throw;
             }
         }
 
         [Fact]
-        public async Task StartTunnelWithHttpProtoAsync()
+        public async Task StartTunnelWithSchemes()
         {
-            var configuration = new TunnelConfiguration(sampleTunnelName2, "http", sampleTunnelUrl)
+            var configuration = new HttpTunnelConfiguration(sampleTunnelName2, sampleTunnelUrl)
             {
-                BindTls = "true",
+                Schemes = new string[] { "http", "https" },
                 HostHeader = sampleHeader
             };
             try
@@ -114,10 +124,13 @@ namespace UnitTests
                 Assert.NotNull(tunnel.Config);
                 Assert.NotNull(tunnel.Config?.Addr);
                 Assert.NotNull(tunnel.Config?.Inspect);
+
+                _outputHelper.WriteLine("Start Tunnel: {0}", tunnel.Name);
             }
             catch (Exception e)
             {
                 Assert.IsType<HttpRequestException>(e);
+                throw;
             }
         }
 
@@ -131,6 +144,7 @@ namespace UnitTests
             catch (Exception e)
             {
                 Assert.IsType<HttpRequestException>(e);
+                throw;
             }
         }
 
@@ -144,6 +158,7 @@ namespace UnitTests
             catch (Exception e)
             {
                 Assert.IsType<HttpRequestException>(e);
+                throw;
             }
         }
 
@@ -165,6 +180,8 @@ namespace UnitTests
                 Assert.NotNull(request.Request);
                 Assert.NotNull(request.Response);
                 Assert.NotEqual(default, request.Duration);
+
+                _outputHelper.WriteLine("Request Id: {0}, from tunnel: {1}", request.Id, request.TunnelName);
             }
         }
 
@@ -186,6 +203,8 @@ namespace UnitTests
                 Assert.NotNull(request.Request);
                 Assert.NotNull(request.Response);
                 Assert.NotEqual(default, request.Duration);
+
+                _outputHelper.WriteLine("Request Id: {0}, from tunnel: {1}", request.Id, request.TunnelName);
             }
         }
 
@@ -204,6 +223,7 @@ namespace UnitTests
                     catch (Exception e)
                     {
                         Assert.IsType<HttpRequestException>(e);
+                        throw;
                     }
                 }
             }
@@ -225,6 +245,7 @@ namespace UnitTests
                     catch (Exception e)
                     {
                         Assert.IsType<HttpRequestException>(e);
+                        throw;
                     }
                 }
             }
@@ -240,6 +261,7 @@ namespace UnitTests
             catch (Exception e)
             {
                 Assert.IsType<HttpRequestException>(e);
+                throw;
             }
         }
 
@@ -253,6 +275,7 @@ namespace UnitTests
             catch (Exception e)
             {
                 Assert.IsType<HttpRequestException>(e);
+                throw;
             }
         }
     }

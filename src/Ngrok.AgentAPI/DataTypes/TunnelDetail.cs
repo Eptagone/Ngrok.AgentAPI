@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Quetzal Rivera.
+﻿// Copyright (c) 2022 Quetzal Rivera.
 // Licensed under the MIT License, See LICENCE in the project root for license information.
 
 using Newtonsoft.Json;
@@ -11,6 +11,9 @@ namespace Ngrok.AgentAPI
     [JsonObject(MemberSerialization = MemberSerialization.OptIn, NamingStrategyType = typeof(SnakeCaseNamingStrategy))]
     public sealed class TunnelDetail
     {
+        /// <summary>
+        /// Tunnel name
+        /// </summary>
         [JsonPropertyName(PropertyNames.Name)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name { get; set; }

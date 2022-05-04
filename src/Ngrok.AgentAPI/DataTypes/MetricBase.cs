@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021 Quetzal Rivera.
+﻿// Copyright (c) 2022 Quetzal Rivera.
 // Licensed under the MIT License, See LICENCE in the project root for license information.
 
 using Newtonsoft.Json;
@@ -8,7 +8,7 @@ using System.Text.Json.Serialization;
 namespace Ngrok.AgentAPI
 {
     [JsonObject(MemberSerialization = MemberSerialization.OptIn, NamingStrategyType = typeof(SnakeCaseNamingStrategy))]
-    public abstract class BaseMetric
+    public abstract class MetricBase
     {
         [JsonPropertyName(PropertyNames.Count)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
@@ -16,6 +16,9 @@ namespace Ngrok.AgentAPI
         [JsonPropertyName(PropertyNames.Rate1)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double Rate1 { get; set; }
+        [JsonPropertyName(PropertyNames.Rate5)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double Rate5 { get; set; }
         [JsonPropertyName(PropertyNames.Rate15)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double Rate15 { get; set; }
